@@ -1,0 +1,29 @@
+/* Mobile */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 481px) and (max-width: 1179px) {
+  html {
+    font-size: 18px;
+  }
+
+}
+
+/* Desktop */
+@media (min-width: 1180px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  height: 100%;
+
+  background-color: antiquewhite;
+
+  font-family: 'Roboto', sans-serif;
+}
