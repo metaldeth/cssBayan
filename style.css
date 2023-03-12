@@ -27,3 +27,130 @@ body {
 
   font-family: 'Roboto', sans-serif;
 }
+
+img {
+  width: 100%;
+}
+
+input {
+  display: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+svg {
+  height: 100%;
+
+  color: black;
+}
+
+.action {
+  display: none;
+
+  transition: rotate 1s ease, fill 0.5s ease;
+
+  font-size: x-large;
+}
+
+.card {
+  border-top: 0.1em solid rgba(0, 0, 0, 0.13);
+  padding: 1rem 0;
+}
+
+.card:hover .action {
+  rotate: 45deg;
+}
+
+.card:hover .content {
+  max-height: 40rem;
+}
+
+.card:hover .cardHead {
+  margin-bottom: 1rem;
+}
+
+.card:active .action {
+  fill: blue;
+}
+
+.cardHead {
+  justify-content: space-between;
+
+  display: flex;
+
+  height: 2rem;
+
+  transition: margin-bottom 1s ease;
+}
+
+.content {
+  margin: auto;
+  width: 75%;
+  max-height: 0;
+
+  transition: max-height 1s ease;
+
+  overflow: hidden;
+}
+
+.header {
+  padding-bottom: 1rem;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+
+  margin: 0;
+
+  text-overflow: ellipsis;
+  color: blue;
+  line-height: 2rem;
+  text-align: center;
+
+  transition: color 0.5s ease;
+}
+
+.wrapper {
+  flex-direction: column;
+
+  display: flex;
+
+  margin: auto;
+  width: 40rem;
+  max-width: 90%;
+}
+
+.wrapper:hover .action {
+  display: block;
+}
+
+.wrapper:hover .title {
+  color: black;
+}
+
+section:has(input:checked) .action {
+  rotate: 45deg;
+}
+
+section:has(input:checked) .cardHead {
+  margin-bottom: 1rem;
+}
+
+section:has(input:checked) .content {
+  max-height: 40rem;
+}
+
+section:has(input:checked) .title {
+  color: black;
+}
+
+.card:active .title {
+  color: blue;
+}
